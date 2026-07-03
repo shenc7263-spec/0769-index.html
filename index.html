@@ -5,7 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>全息科技气象预警平台</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <!-- 替换为国内可访问的 Font Awesome 镜像 -->
+  <link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
   <script>
     tailwind.config = {
       theme: {
@@ -480,9 +481,9 @@
         <div class="scan-line"></div>
         <div class="flex flex-col md:flex-row justify-between items-center gap-6">
           <div class="text-center md:text-left">
-            <h3 class="text-xl text-gray-300" id="cityName">北京市</h3>
+            <h3 class="text-xl text-gray-300" id="cityName">东莞市</h3>
             <div class="flex items-end justify-center md:justify-start mt-2">
-              <span class="text-7xl md:text-8xl font-bold text-white" id="temp">26</span>
+              <span class="text-7xl md:text-8xl font-bold text-white" id="temp">29</span>
               <span class="text-3xl text-gray-400">°C</span>
             </div>
             <p class="text-xl mt-3 text-tech-blue" id="weatherDesc">多云</p>
@@ -500,22 +501,22 @@
           <div class="glass-tech p-4 rounded-xl text-center hover-lift transition-all cursor-default">
             <i class="fa fa-tint text-tech-blue text-2xl"></i>
             <p class="text-gray-400 text-sm mt-2">湿度</p>
-            <p class="font-bold text-lg text-white" id="humidity">58%</p>
+            <p class="font-bold text-lg text-white" id="humidity">72%</p>
           </div>
           <div class="glass-tech p-4 rounded-xl text-center hover-lift transition-all cursor-default">
             <i class="fa fa-location-arrow text-tech-green text-2xl"></i>
             <p class="text-gray-400 text-sm mt-2">风力</p>
-            <p class="font-bold text-lg text-white" id="wind">东南风3级</p>
+            <p class="font-bold text-lg text-white" id="wind">南风2级</p>
           </div>
           <div class="glass-tech p-4 rounded-xl text-center hover-lift transition-all cursor-default">
             <i class="fa fa-leaf text-tech-purple text-2xl"></i>
             <p class="text-gray-400 text-sm mt-2">空气质量</p>
-            <p class="font-bold text-lg text-white" id="aqi">优 35</p>
+            <p class="font-bold text-lg text-white" id="aqi">良 62</p>
           </div>
           <div class="glass-tech p-4 rounded-xl text-center hover-lift transition-all cursor-default">
             <i class="fa fa-thermometer-half text-tech-orange text-2xl"></i>
             <p class="text-gray-400 text-sm mt-2">体感温度</p>
-            <p class="font-bold text-lg text-white" id="feelTemp">28°C</p>
+            <p class="font-bold text-lg text-white" id="feelTemp">32°C</p>
           </div>
         </div>
       </div>
@@ -837,14 +838,15 @@
     "雪": { icon: "fa-snowflake-o", tip: "降雪天气，注意防滑", animation: "snow" }
   };
 
+  // 默认东莞市天气数据
   let weatherInfo = {
-    city: "北京市",
-    temp: 26,
+    city: "东莞市",
+    temp: 29,
     desc: "多云",
-    humidity: "58%",
-    wind: "东南风3级",
-    aqi: "优 35",
-    feel: 28
+    humidity: "72%",
+    wind: "南风2级",
+    aqi: "良 62",
+    feel: 32
   };
 
   function renderWeatherUI(){
